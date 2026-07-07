@@ -25,6 +25,13 @@ namespace Presentation.Controllers
         public async Task<ActionResult<CustomerStatsDTO>> GetCustomerStats(string id)
             => Ok(await serviceManager.CustomerService.GetCustomerStatsAsync(id));
 
+        [HttpPatch("{id}/role")]
+        public async Task<IActionResult> UpdateCustomerRole(string id, [FromBody] UpdateRoleDTO dto)
+        {
+            await serviceManager.CustomerService.UpdateCustomerRoleAsync(id, dto.Role);
+            return Ok();
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomer(string id)
         {

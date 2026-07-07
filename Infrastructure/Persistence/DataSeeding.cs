@@ -24,11 +24,10 @@ namespace Persistence
             await ApplyPendingMigrationsAsync();
 
             await SeedBrandsAsync();
-            await SeedCategoriesAsync();        // ← لازم تيجي قبل SubCategories دلوقتي
-            await SeedSubCategoriesAsync();      // ← كانت SeedTypesAsync
+            await SeedCategoriesAsync();        
+            await SeedSubCategoriesAsync();    
             await SeedProductsAsync();
             await SeedDeliveryMethodsAsync();
-            // SeedProductCategoriesAsync اتشالت بالكامل — مفيش Many-to-Many تاني
         }
 
         public async Task IdentityDataSeedAsync()
@@ -153,7 +152,7 @@ namespace Persistence
 
         private async Task SeedRolesAsync()
         {
-            foreach (var role in new[] { "Admin", "SuperAdmin" })
+            foreach (var role in new[] { "Admin", "Customer" })
                 if (!await _roleManager.RoleExistsAsync(role))
                     await _roleManager.CreateAsync(new IdentityRole(role));
         }
@@ -165,7 +164,7 @@ namespace Persistence
                 new { DisplayName = "Mohamed Tarek", Email = "Mohamed@gmail.com",
                       UserName = "MohamedTarek",  Phone = "0123456789", Role = "Admin"     },
                 new { DisplayName = "Salma Mohamed", Email = "Salma@gmail.com",
-                      UserName = "SalmaMohamed",  Phone = "0123456789", Role = "SuperAdmin" }
+                      UserName = "SalmaMohamed",  Phone = "0123456789", Role = "Admin" }
             };
 
             foreach (var seed in seedUsers)

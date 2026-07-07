@@ -66,6 +66,19 @@ namespace Service
                 TotalSpend = successfulTotal
             };
         }
+        public async Task UpdateCustomerRoleAsync(string userId, string newRole)
+        {
+            var validRoles = new[] { "Admin", "Customer" };
+            if (!validRoles.Contains(newRole))
+                throw new BadRequestException([$"'{newRole}' is not a valid role."]);
+
+            var user = await userManager.FindByIdAsync(userId)
+                ?? throw new UserNotFoundException(userId);
+
+            var currentRoles = await userManager.GetRolesAsync(user);
+            await userManager.RemoveFromRolesAsync(user, currentRoles);
+            await userManager.AddToRoleAsync(user, newRole);
+        }
 
         public async Task DeleteCustomerAsync(string userId)
         {

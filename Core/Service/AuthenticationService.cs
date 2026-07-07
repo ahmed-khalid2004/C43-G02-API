@@ -53,6 +53,8 @@ namespace Service
             if (!result.Succeeded)
                 throw new BadRequestException(result.Errors.Select(e => e.Description).ToList());
 
+            await _userManager.AddToRoleAsync(user, "Customer");
+
             return await BuildUserDtoAsync(user);
         }
 
@@ -177,7 +179,7 @@ namespace Service
                 DisplayName = user.DisplayName,
                 PhoneNumber = user.PhoneNumber,
                 UserName = user.UserName,
-                Roles = roles,
+                Role = roles.FirstOrDefault() ?? "Customer",
                 Address = user.Address is null ? null : _mapper.Map<Address, AddressDTO>(user.Address),
                 Token = await CreateTokenAsync(user, roles)
             };

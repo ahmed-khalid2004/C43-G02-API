@@ -65,8 +65,11 @@ namespace E_Commerce.Web.Extensions
             // Serialize enums as strings everywhere (request binding + response JSON)
             // ?sort=PriceAsc → bound correctly; response returns "PriceAsc" not 3
             Services.AddControllers()
-                    .AddJsonOptions(o =>
-                        o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+        .AddJsonOptions(o =>
+        {
+            o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+            o.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+        });
 
             return Services;
         }
@@ -104,7 +107,6 @@ namespace E_Commerce.Web.Extensions
             Services.AddAuthorization(options =>
             {
                 options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
-                options.AddPolicy("SuperAdmin", policy => policy.RequireRole("SuperAdmin"));
             });
 
             return Services;

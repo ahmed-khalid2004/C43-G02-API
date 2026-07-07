@@ -16,7 +16,7 @@
         public string DisplayName { get; set; } = default!;
         public string? PhoneNumber { get; set; }
         public string? UserName { get; set; }
-        public IList<string> Roles { get; set; } = [];
+        public string Role { get; set; } = string.Empty;
         public AddressDTO? Address { get; set; }
     }
 }
