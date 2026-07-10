@@ -14,7 +14,8 @@ namespace Persistence
         StoreDbContext _dbContext,
         UserManager<ApplicationUser> _userManager,
         RoleManager<IdentityRole> _roleManager,
-        StoreIdentityDbContext _identityDbContext) : IDataSeeding
+        StoreIdentityDbContext _identityDbContext,
+        IConfiguration _configuration) : IDataSeeding
     {
         private static string SeedPath(string fileName)
             => Path.Combine(AppContext.BaseDirectory, "DataSeed", fileName);
@@ -159,6 +160,11 @@ namespace Persistence
 
         private async Task SeedUsersAsync()
         {
+            var defaultPassword = _configuration["SeedData:DefaultAdminPassword"];
+            if (string.IsNullOrWhiteSpace(defaultPassword))
+                throw new InvalidOperationException(
+                    "Seed admin password is not configured. Set 'SeedData:DefaultAdminPassword'.");
+
             var seedUsers = new[]
             {
                 new { DisplayName = "Mohamed Tarek", Email = "Mohamed@gmail.com",
@@ -179,7 +185,7 @@ namespace Persistence
                     PhoneNumber = seed.Phone
                 };
 
-                var result = await _userManager.CreateAsync(user, "P@ssw0rd");
+                var result = await _userManager.CreateAsync(user, defaultPassword);
 
                 if (result.Succeeded)
                     await _userManager.AddToRoleAsync(user, seed.Role);

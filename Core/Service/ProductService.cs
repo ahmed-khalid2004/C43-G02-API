@@ -3,16 +3,18 @@ using DomainLayer.Contracts;
 using DomainLayer.Exceptions;
 using DomainLayer.Models.ProductModule;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Service.Specifications;
 using Shared;
 using Shared.DataTransferObjects.ProductModuleDTOs;
 
 namespace Service
 {
-    public class ProductService(IUnitOfWork unitOfWork, IMapper mapper) : IProductService
+    public class ProductService(IUnitOfWork unitOfWork, IMapper mapper, IConfiguration configuration) : IProductService
     {
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IMapper _mapper = mapper;
+        private readonly IConfiguration _configuration = configuration;
 
         // ── Products Read ─────────────────────────────────────────────────────
 
@@ -54,8 +56,28 @@ namespace Service
                 ?? throw new ProductNotFoundException(id);
 
             _mapper.Map(dto, product);
+            product.PictureUrl = NormalizePictureUrl(dto.PictureUrl);
+
             repo.Update(product);
             await _unitOfWork.SaveChangesAsync();
+        }
+
+        private string NormalizePictureUrl(string pictureUrl)
+        {
+            if (string.IsNullOrEmpty(pictureUrl))
+                return pictureUrl;
+
+            if (Uri.TryCreate(pictureUrl, UriKind.Absolute, out var uri))
+            {
+                var ownDomain = _configuration.GetSection("Urls")["BaseUrl"];
+
+                if (!string.IsNullOrEmpty(ownDomain) && uri.Host == new Uri(ownDomain).Host)
+                    return uri.AbsolutePath;
+
+                return pictureUrl;
+            }
+
+            return pictureUrl;
         }
 
         public async Task DeleteProductAsync(int id)

@@ -23,7 +23,7 @@ namespace Services
     : IServiceManager
 
     {
-        private readonly Lazy<IProductService> _lazyProductService = new(() => new ProductService(unitOfWork, mapper));
+        private readonly Lazy<IProductService> _lazyProductService = new(() => new ProductService(unitOfWork, mapper, configuration));
         private readonly Lazy<IBasketService> _lazyBasketService = new(() => new BasketService(baseketRepository, mapper));
         private readonly Lazy<IAuthenticationService> _lazyAuthenticationService = new(() => new AuthenticationService(userManager, configuration, mapper, emailService, redisClient));
         private readonly Lazy<IOrderService> _lazyOrderService = new(() => new OrderService(mapper, baseketRepository, unitOfWork));
