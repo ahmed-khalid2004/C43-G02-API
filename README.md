@@ -444,7 +444,7 @@ You can add
 
 - **Mostafa Ehab Abd Elhakim** *(Team Leader)* : https://github.com/Mostafa-Elabsawy
 - **Ahmed Khaled Ahmed** : https://github.com/ahmed-khalid2004
-- **Mahmoud Gamal Farouk** : 
+- **Mahmoud Gamal Farouk** : https://github.com/mahmoudgamal37 
 - **Mohamed Ahmed Ali** : https://github.com/MohammadAhmdAli
 - **Mohammed Magdy Abdelkareem** : https://github.com/MohammedMagdyEl
 
