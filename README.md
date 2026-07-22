@@ -423,21 +423,6 @@ appsettings.Development.json
 
 ---
 
-# 📸 Screenshots
-
-You can add
-
-- Home Page
-- Products
-- Product Details
-- Shopping Cart
-- Checkout
-- Dashboard
-- Swagger
-- Database ERD
-
----
-
 # 👨‍💻 Team
 
 | Member | Role | GitHub |
