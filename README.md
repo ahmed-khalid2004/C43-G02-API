@@ -49,6 +49,24 @@ The application is deployed and publicly accessible.
 
 ---
 
+# 🎥 Project Demonstration
+
+Watch a complete walkthrough of Trendora, including:
+
+- 🛍 Frontend
+- ⚙ Backend API
+- 📚 Swagger Documentation
+- 🗄 Database Design
+- 👨‍💻 Admin Dashboard
+- 🔐 Authentication & Authorization
+- 🛒 Shopping & Checkout Flow
+
+📹 Demo Video
+
+https://drive.google.com/drive/folders/1LQnRDDJSXeoNDH0K8RHW3ShthJqlGIMq
+
+---
+
 # 📖 About
 
 Trendora is a complete **Full Stack E-Commerce Platform** developed as a graduation project.
@@ -405,26 +423,6 @@ appsettings.Development.json
 
 ---
 
-# 🔗 Quick Links
-
-🌐 Live Website
-
-https://e-commerce-trendora.vercel.app/home
-
-📚 Swagger
-
-https://ahmedkhalid25-001-site1.etempurl.com/swagger/index.html
-
-⚙ Backend Repository
-
-https://github.com/ahmed-khalid2004/E-Commerce_API
-
-🎨 Frontend Repository
-
-https://github.com/Mostafa-Elabsawy/E-commerce_Trendora
-
----
-
 # 📸 Screenshots
 
 You can add
@@ -442,11 +440,26 @@ You can add
 
 # 👨‍💻 Team
 
-- **Mostafa Ehab Abd Elhakim** *(Team Leader)* : https://github.com/Mostafa-Elabsawy
-- **Ahmed Khaled Ahmed** : https://github.com/ahmed-khalid2004
-- **Mahmoud Gamal Farouk** : https://github.com/mahmoudgamal37 
-- **Mohamed Ahmed Ali** : https://github.com/MohammadAhmdAli
-- **Mohammed Magdy Abdelkareem** : https://github.com/MohammedMagdyEl
+| Member | Role | GitHub |
+|--------|------|---------|
+| **Mostafa Ehab Abd Elhakim** | Team Leader | [@Mostafa-Elabsawy](https://github.com/Mostafa-Elabsawy) |
+| **Ahmed Khaled Ahmed** | Backend Developer | [@ahmed-khalid2004](https://github.com/ahmed-khalid2004) |
+| **Mahmoud Gamal Farouk** | Full Stack Developer | [@mahmoudgamal37](https://github.com/mahmoudgamal37) |
+| **Mohamed Ahmed Ali** | Full Stack Developer | [@MohammadAhmdAli](https://github.com/MohammadAhmdAli) |
+| **Mohammed Magdy Abdelkareem** | Full Stack Developer | [@MohammedMagdyEl](https://github.com/MohammedMagdyEl) |
+
+---
+
+# 🔗 Quick Links
+
+| Resource | Link |
+|----------|------|
+| 🌐 Live Website | https://e-commerce-trendora.vercel.app/home |
+| ⚙ Backend API | https://ahmedkhalid25-001-site1.etempurl.com/api/ |
+| 📚 Swagger | https://ahmedkhalid25-001-site1.etempurl.com/swagger/index.html |
+| 🎥 Project Demo | https://drive.google.com/drive/folders/1LQnRDDJSXeoNDH0K8RHW3ShthJqlGIMq |
+| 💻 Backend Repository | https://github.com/ahmed-khalid2004/E-Commerce_API |
+| 🎨 Frontend Repository | https://github.com/Mostafa-Elabsawy/E-commerce_Trendora |
 
 ---
 
