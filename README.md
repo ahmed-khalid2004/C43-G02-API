@@ -443,7 +443,7 @@ You can add
 | Member | Role | GitHub |
 |--------|------|---------|
 | **Mostafa Ehab Abd Elhakim** | Team Leader | [@Mostafa-Elabsawy](https://github.com/Mostafa-Elabsawy) |
-| **Ahmed Khaled Ahmed** | Backend Developer | [@ahmed-khalid2004](https://github.com/ahmed-khalid2004) |
+| **Ahmed Khaled Ahmed** | Full Stack Developer | [@ahmed-khalid2004](https://github.com/ahmed-khalid2004) |
 | **Mahmoud Gamal Farouk** | Full Stack Developer | [@mahmoudgamal37](https://github.com/mahmoudgamal37) |
 | **Mohamed Ahmed Ali** | Full Stack Developer | [@MohammadAhmdAli](https://github.com/MohammadAhmdAli) |
 | **Mohammed Magdy Abdelkareem** | Full Stack Developer | [@MohammedMagdyEl](https://github.com/MohammedMagdyEl) |
