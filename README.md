@@ -442,11 +442,11 @@ You can add
 
 # 👨‍💻 Team
 
-- **Mostafa Ehab Abd Elhakim** *(Team Leader)*
-- **Ahmed Khaled Ahmed**
-- **Mahmoud Gamal Farouk**
-- **Mohamed Ahmed Ali**
-- **Mohammed Magdy Abdelkareem**
+- **Mostafa Ehab Abd Elhakim** *(Team Leader)* : https://github.com/Mostafa-Elabsawy
+- **Ahmed Khaled Ahmed** : https://github.com/ahmed-khalid2004
+- **Mahmoud Gamal Farouk** : 
+- **Mohamed Ahmed Ali** : https://github.com/MohammadAhmdAli
+- **Mohammed Magdy Abdelkareem** : https://github.com/MohammedMagdyEl
 
 ---
 
