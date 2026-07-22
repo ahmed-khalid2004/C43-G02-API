@@ -19,21 +19,33 @@ Built with **ASP.NET Core Web API**, **Angular**, **SQL Server**, **Redis**, and
 
 # 🌐 Live Demo
 
-### Frontend
+## 🛍 Frontend (Vercel)
 
-👉 https://e-commerce-trendora.vercel.app/home
+https://e-commerce-trendora.vercel.app/home
 
 ---
 
-# 📂 Repositories
+## 🚀 Backend API (Hosted)
 
-### Backend
+Swagger Documentation
 
-https://github.com/ahmed-khalid2004/E-Commerce_API
+https://ahmedkhalid25-001-site1.etempurl.com/swagger/index.html
 
-### Frontend
+Base API URL
 
-https://github.com/Mostafa-Elabsawy/E-commerce_Trendora
+https://ahmedkhalid25-001-site1.etempurl.com/api/
+
+---
+
+# 🚀 Deployment
+
+The application is deployed and publicly accessible.
+
+| Service | Platform | URL |
+|----------|----------|-----|
+| 🌐 Frontend | Vercel | https://e-commerce-trendora.vercel.app/home |
+| ⚙ Backend API | SmarterASP.NET | https://ahmedkhalid25-001-site1.etempurl.com/api/ |
+| 📚 Swagger | SmarterASP.NET | https://ahmedkhalid25-001-site1.etempurl.com/swagger/index.html |
 
 ---
 
@@ -306,6 +318,11 @@ Redis is used for
 - Tailwind CSS
 - Angular Router
 
+## ☁ Deployment
+
+- SmarterASP.NET (ASP.NET Core Hosting)
+- Vercel (Angular Frontend)
+
 ---
 
 # 📂 Project Structure
@@ -385,6 +402,26 @@ inside
 ```
 appsettings.Development.json
 ```
+
+---
+
+# 🔗 Quick Links
+
+🌐 Live Website
+
+https://e-commerce-trendora.vercel.app/home
+
+📚 Swagger
+
+https://ahmedkhalid25-001-site1.etempurl.com/swagger/index.html
+
+⚙ Backend Repository
+
+https://github.com/ahmed-khalid2004/E-Commerce_API
+
+🎨 Frontend Repository
+
+https://github.com/Mostafa-Elabsawy/E-commerce_Trendora
 
 ---
 
