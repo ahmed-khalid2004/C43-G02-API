@@ -245,7 +245,7 @@ Admin / Customer
 Current Token Lifetime
 
 ```
-24 Hours
+1 Hour
 ```
 
 ---
